@@ -9,12 +9,12 @@ script:
   - docker run jfbill/react-test npm test -- --coverage
 
 after_success:
-  - docker build -t jfbill/multi-client ./client
+  - docker build -t jfbill/multi-client-oc ./client
   - docker build -t jfbill/multi-server ./server
   - docker build -t jfbill/multi-worker ./worker
   # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
-  - docker push jfbill/multi-client
+  - docker push jfbill/multi-client-oc
   - docker push jfbill/multi-server
   - docker push jfbill/multi-worker
