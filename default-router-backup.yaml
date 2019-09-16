@@ -1,0 +1,22 @@
+apiVersion: v1
+items:
+- apiVersion: rbac.authorization.k8s.io/v1
+  kind: ClusterRoleBinding
+  metadata:
+    creationTimestamp: 2019-09-12T16:37:36Z
+    name: router-router-role
+    resourceVersion: "985"
+    selfLink: /apis/rbac.authorization.k8s.io/v1/clusterrolebindings/router-router-role
+    uid: a07401a5-d57b-11e9-8e30-080027fea354
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: ClusterRole
+    name: system:router
+  subjects:
+  - kind: ServiceAccount
+    name: router
+    namespace: default
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
