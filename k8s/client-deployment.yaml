@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: client
-          image: jfbill/multi-client
+          image: jfbill/multi-client-oc
           ports:
             - containerPort: 3000
