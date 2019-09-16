@@ -17,4 +17,4 @@ after_success:
   # Take those images and push them to docker hub
   - docker push jfbill/multi-client
   - docker push jfbill/multi-server
-  - docker push jfbill/multi-worker
+  # - docker push jfbill/multi-worker
