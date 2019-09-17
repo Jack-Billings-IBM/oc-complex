@@ -3,7 +3,6 @@ services:
   - docker
 
 before_install:
-  - npm install react-router-dom
   - docker build -t jfbill/react-test -f ./client/Dockerfile.dev ./client
 
 script:
